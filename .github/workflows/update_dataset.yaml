@@ -1,4 +1,4 @@
-name: Run Script Every Minute
+name: Update TRL-Metrics Dataset
 
 on:
   schedule:
