@@ -19,14 +19,17 @@ jobs:
           pip install datasets google-cloud-bigquery
           
       - name: Set up Google Credentials
-        run: |
-          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > ${{ github.workspace }}/google_credentials.json
+        id: create-json
+        uses: jsdaniell/create-json@v1.2.3
+        with:
+          name: "credentials.json"
+          json: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
 
       - name: Run Script
         env:
           GITHUB_PAT: ${{ secrets.GH_PAT }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/google_credentials.json
+          GOOGLE_APPLICATION_CREDENTIALS: google_credentials.json
         run: |
           python stargazers.py
           python pypi_downloads.py
