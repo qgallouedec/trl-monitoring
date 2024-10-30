@@ -2,14 +2,16 @@ name: Run Script Every Minute
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # This triggers the workflow every minute
+    - cron: '*/5 * * * *'  # This triggers the workflow every 5 minutes
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run Script
-        run: python update_dataset.py  # Replace with your script or command
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        run: python stargazers.py
