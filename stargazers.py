@@ -1,8 +1,9 @@
-import requests
-from datetime import datetime
-from datasets import Dataset
-import pyarrow as pa
 import os
+from datetime import datetime
+
+import pyarrow as pa
+import requests
+from datasets import Dataset
 
 
 def get_stargazers(owner, repo, token):

@@ -1,7 +1,7 @@
-from datasets import Dataset
-from google.cloud import bigquery
 import os
 
+from datasets import Dataset
+from google.cloud import bigquery
 
 client = bigquery.Client()
 
