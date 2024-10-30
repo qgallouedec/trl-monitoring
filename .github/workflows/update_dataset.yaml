@@ -2,7 +2,7 @@ name: Run Script Every Minute
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # This triggers the workflow every minute
+    - cron: '* * * * *'  # This triggers the workflow every minute
 
 jobs:
   run-script:
