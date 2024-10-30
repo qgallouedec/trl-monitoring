@@ -13,5 +13,5 @@ jobs:
 
       - name: Run Script
         env:
-          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+          GITHUB_PAT: ${{ secrets.GH_PAT }}
         run: python stargazers.py
