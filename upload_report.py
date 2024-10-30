@@ -257,7 +257,7 @@ report = f"""
 - {unanswered_issues_long_term_emoji} Issues not answered within a week: {unanswered_issues_long_term} (prev: {unanswered_issues_long_term_prev}, change: {unanswered_issues_long_term_change:+.2f}%)
 
 Further comments and analysis :arrow_down:
-[Code for generating this report](https://gist.github.com/qgallouedec/86f9a53111b9cca7194f4d845dea7949)
+[Code for generating this report](https://github.com/qgallouedec/trl-monitoring)
 """
 
 print(report)
