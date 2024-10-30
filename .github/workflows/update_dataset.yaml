@@ -22,7 +22,7 @@ jobs:
         id: create-json
         uses: jsdaniell/create-json@v1.2.3
         with:
-          name: "credentials.json"
+          name: "google_credentials.json"
           json: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
 
       - name: Run Script
