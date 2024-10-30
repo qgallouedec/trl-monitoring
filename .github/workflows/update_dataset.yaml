@@ -1,0 +1,12 @@
+name: Daily Script
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # This runs at midnight every day
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Script
+        run: python update_dataset.py
