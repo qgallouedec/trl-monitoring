@@ -34,3 +34,4 @@ jobs:
           python stargazers.py
           python pypi_downloads.py
           python models.py
+          python issues_and_comments.py
