@@ -92,7 +92,7 @@ image_path = "models_over_time.png"
 plt.savefig(image_path)
 
 with open(image_path, "rb") as file:
-    response = client.fiules_pload_v2(file=file, channels=[channel_id])
+    response = client.files_upload_v2(file=file, channels=[channel_id])
 
 
 # Helper function to filter data based on time range
