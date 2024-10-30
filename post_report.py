@@ -244,16 +244,16 @@ report = f"""
 
 - {downloads_short_term_emoji} PyPI downloads: {downloads_short_term / 1_000:.1f}K (prev: {downloads_short_term_prev / 1_000:.1f}K, change: {downloads_short_term_change:+.2f}%)
 - {stargazers_short_term_emoji} New GH :star:: {stargazers_short_term} (prev: {stargazers_short_term_prev}, change: {stargazers_short_term_change:+.2f}%)
-- {models_short_term_emoji} New models on :hugging_face: Hub: {models_short_term} (prev: {models_short_term_prev}, change: {models_short_term_change:+.2f}%)
-- {models_likes_short_term_emoji} New likes on :hugging_face: Hub: {models_likes_short_term} (prev: {models_likes_short_term_prev}, change: {models_likes_short_term_change:+.2f}%)
+- {models_short_term_emoji} New TRL models on :hugging_face: Hub: {models_short_term} (prev: {models_short_term_prev}, change: {models_short_term_change:+.2f}%)
+- {models_likes_short_term_emoji} New likes on TRL models: {models_likes_short_term} (prev: {models_likes_short_term_prev}, change: {models_likes_short_term_change:+.2f}%)
 - {unanswered_issues_short_term_emoji} Issues not answered within a week: {unanswered_issues_short_term} (prev: {unanswered_issues_short_term_prev}, change: {unanswered_issues_short_term_change:+.2f}%)
 
 *:60fps_parrot: Long-Term* (Last 4 Months)
 
 - {downloads_long_term_emoji} PyPI downloads: {downloads_long_term / 1_000_000:.1f}M (prev: {downloads_long_term_prev/1_000_000:.1f}M, change: {downloads_long_term_change:+.2f}%, total: {downloads_total/1_000_000:.1f}M)
 - {stargazers_long_term_emoji} New GH :star:: {stargazers_long_term} (prev: {stargazers_long_term_prev}, change: {stargazers_long_term_change:+.2f}%, total: {stargazers_total})
-- {models_long_term_emoji} New models on :hugging_face: Hub: {models_long_term} (prev: {models_long_term_prev}, change: {models_long_term_change:+.2f}%, total: {models_total})
-- {models_likes_long_term_emoji} New likes on :hugging_face: Hub: {models_likes_long_term} (prev: {models_likes_long_term_prev}, change: {models_likes_long_term_change:+.2f}%, total: {models_likes_total})
+- {models_long_term_emoji} New TRL models on :hugging_face: Hub: {models_long_term} (prev: {models_long_term_prev}, change: {models_long_term_change:+.2f}%, total: {models_total})
+- {models_likes_long_term_emoji} New likes on TRL models: {models_likes_long_term} (prev: {models_likes_long_term_prev}, change: {models_likes_long_term_change:+.2f}%, total: {models_likes_total})
 - {unanswered_issues_long_term_emoji} Issues not answered within a week: {unanswered_issues_long_term} (prev: {unanswered_issues_long_term_prev}, change: {unanswered_issues_long_term_change:+.2f}%)
 
 Further comments and analysis :arrow_down:
