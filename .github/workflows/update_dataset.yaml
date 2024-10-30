@@ -20,13 +20,13 @@ jobs:
           
       - name: Set up Google Credentials
         run: |
-          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > $HOME/google_credentials.json
+          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > ${{ github.workspace }}/google_credentials.json
 
       - name: Run Script
         env:
           GITHUB_PAT: ${{ secrets.GH_PAT }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          GOOGLE_APPLICATION_CREDENTIALS: $HOME/google_credentials.json
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/google_credentials.json
         run: |
           python stargazers.py
           python pypi_downloads.py
