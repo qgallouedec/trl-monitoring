@@ -33,3 +33,4 @@ jobs:
         run: |
           python stargazers.py
           python pypi_downloads.py
+          python models.py
