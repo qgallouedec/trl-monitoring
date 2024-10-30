@@ -235,6 +235,7 @@ unanswered_issues_long_term_emoji = "🔴" if unanswered_issues_long_term_change
 today = now.strftime("%Y-%m")
 
 report = f"""
+```
 :trl:
 *Monthly [TRL](https://github.com/huggingface/trl) Metrics Report*
 :date: {today}
@@ -258,6 +259,7 @@ report = f"""
 
 Further comments and analysis :arrow_down:
 [Code for generating this report](https://github.com/qgallouedec/trl-monitoring)
+```
 """
 
 print(report)
