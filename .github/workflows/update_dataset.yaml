@@ -12,4 +12,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Script
-        run: python your_script.py  # Replace with your script or command
+        run: python update_dataset.py  # Replace with your script or command
