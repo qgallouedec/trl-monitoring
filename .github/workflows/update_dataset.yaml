@@ -2,7 +2,7 @@ name: Run Script Every Minute
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # This triggers the workflow every 5 minutes
+    - cron: '0 0 * * *'  # This triggers the workflow every day at 00:00 UTC
 
   workflow_dispatch:
 
