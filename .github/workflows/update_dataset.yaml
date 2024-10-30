@@ -1,12 +1,15 @@
-name: Daily Script
+name: Run Script Every Minute
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # This runs at midnight every day
+    - cron: '*/1 * * * *'  # This triggers the workflow every minute
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Run Script
-        run: python update_dataset.py
+        run: python your_script.py  # Replace with your script or command
