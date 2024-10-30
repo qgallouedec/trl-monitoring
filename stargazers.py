@@ -4,6 +4,7 @@ from datasets import Dataset
 import pyarrow as pa
 import os
 
+
 def get_stargazers(owner, repo, token):
     # Initialize the count and the page number
     page = 1
@@ -29,15 +30,18 @@ def get_stargazers(owner, repo, token):
 
     return stargazers
 
-token = os.environ.get("GITHUB_PAT")
-stargazers = get_stargazers("huggingface", "trl", token)
+
+gh_token = os.environ.get("GITHUB_PAT")
+stargazers = get_stargazers("huggingface", "trl", gh_token)
 stargazers = {key: [stargazer[key] for stargazer in stargazers] for key in stargazers[0].keys()}
 dataset = Dataset.from_dict(stargazers)
+
 
 def clean(example):
     starred_at = datetime.strptime(example["starred_at"], "%Y-%m-%dT%H:%M:%SZ")
     starred_at = pa.scalar(starred_at, type=pa.timestamp("s", tz="UTC"))
     return {"starred_at": starred_at, "user": example["user"]["login"]}
 
+
 dataset = dataset.map(clean, remove_columns=dataset.column_names)
-dataset.push_to_hub("qgallouedec/trl-metrics", config_name="stargazers")
+dataset.push_to_hub("qgallouedec/trl-metrics", config_name="stargazers", token=os.environ.get("HF_TOKEN"))
