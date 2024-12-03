@@ -81,7 +81,7 @@ values = [df[col].values for col in df.columns]
 labels = df.columns
 
 colors = plt.cm.rainbow([i / len(labels) for i in range(len(labels))])
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(6, 4))
 plt.stackplot(df.index, *values, labels=labels, alpha=0.8, colors=colors)
 plt.legend(loc="upper left")
 plt.xlabel("Date")
