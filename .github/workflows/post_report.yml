@@ -2,7 +2,7 @@ name: Post report
 
 on:
   schedule:
-    - cron: '1 0 * * *'  # This triggers the workflow every day at 00:01 UTC
+    - cron: '0 1 * * *'  # This triggers the workflow every day at 01:00 UTC
 
   workflow_dispatch:
 
