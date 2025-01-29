@@ -25,7 +25,7 @@ def get_full_response(url, headers, params=None):
             break
         output.extend(batch)
         page += 1
-        time.sleep(0.05)
+        time.sleep(0.1)
     return output
 
 
