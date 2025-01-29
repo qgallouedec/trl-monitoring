@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+import time
 
 import requests
 from datasets import Dataset
@@ -24,6 +25,7 @@ def get_full_response(url, headers, params=None):
             break
         output.extend(batch)
         page += 1
+        time.sleep(0.05)
     return output
 
 
